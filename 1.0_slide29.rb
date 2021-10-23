@@ -8,6 +8,7 @@ arr.include?(number)
 def program
     puts "Enter number"
     num = gets.to_i
+    case num
     if num > 100
         puts "Greater than 100"
     elsif num >= 0 && num <= 50
