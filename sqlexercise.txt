@@ -1,0 +1,53 @@
+1. Create a table named 'Students'. Fields: name: character varying(50), course: character varying(50), age: numeric.
+2. Insert 5 records to the Students table. You are in charge of the data.
+3. Sort them by descending age.
+4. Get their average age.
+5. Get the sum of their age.
+6. Display millenials (age 25 to 32 yrs old).
+7. Update the course of millenials to "Millenialogy".
+8. Delete students whose age are greater than 30.
+9. Display the names of the students
+10. Display the names and courses of students whose age are lower than 20
+
+#1
+CREATE TABLE students (
+    id integer PRIMARY KEY,
+    name character varying(50) NOT NULL, 
+    course character varying(50),
+    age numeric
+);
+
+#2
+INSERT INTO students (id, name, course, age) VALUES (1, 'Jet', 'BS ChE', 23);
+
+INSERT INTO students (id, name, course, age) VALUES (2, 'Bet', 'BS BhE', 18);
+
+INSERT INTO students (id, name, course, age) VALUES (3, 'Fet', 'BS FhE', 25);
+
+INSERT INTO students (id, name, course, age) VALUES (4, 'Get', 'BS GhE', 29);
+
+INSERT INTO students (id, name, course, age) VALUES (5, 'Pet', 'BS PhE', 35);
+
+#3
+SELECT * FROM students ORDER BY age DESC;
+
+#4
+SELECT AVG(age) FROM students;
+
+#5
+SELECT SUM(age) FROM students;
+
+#6
+SELECT * FROM students WHERE age >= 25 AND age <= 32;
+
+#7
+UPDATE students SET course = 'Millenialogy' WHERE age >= 25 AND age <= 32;
+
+#8
+DELETE FROM students WHERE age > 30;
+
+#9
+SELECT name FROM students;
+
+#10
+SELECT name, age FROM students WHERE age < 20;
