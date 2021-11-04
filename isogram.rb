@@ -2,10 +2,9 @@ str = 'test'
 
 def is_isogram(str)
     iso = true
-    len = str.length
 
     str2 = str.downcase.chars.sort.join
-    for i in 0..len-1
+    for i in 0..str.length-1
         if str2[i] == str2[i+1]
             iso = false
         end

@@ -127,10 +127,10 @@
 # puts Cauliflower.new.form
 # puts Species.new.form
 
-def liters(time)
-    puts (time*0.5).floor
-end
+# def liters(time)
+#     puts (time*0.5).floor
+# end
 
-liters(3)
-liters(6.7)
-liters(11.8)
+# liters(3)
+# liters(6.7)
+# liters(11.8)
