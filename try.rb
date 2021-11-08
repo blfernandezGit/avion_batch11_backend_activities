@@ -1,3 +1,19 @@
+def century(year)
+    message = ''
+    if year % 100 == 0
+        message = year / 100
+    else
+        message = ( year / 100 ) + 1
+    end
+
+    puts message
+end
+
+century(-1)
+century(1900)
+century(1601)
+century(2000)
+
 # class User
 #     attr_reader :first_name, :last_name
 #     attr_writer :first_name
