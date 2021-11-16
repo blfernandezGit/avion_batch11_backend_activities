@@ -1,19 +1,50 @@
-def century(year)
-    message = ''
-    if year % 100 == 0
-        message = year / 100
-    else
-        message = ( year / 100 ) + 1
+def encode(str) 
+    str2 = str.chars
+    for i in 0..str.length
+        case str.chars[i]
+        when 'a'
+            str2[i] = 1
+        when 'e'
+            str2[i] = 2
+        when 'i'
+            str2[i] = 3
+        when 'o'
+            str2[i] = 4
+        when 'u'
+            str2[i] = 5
+        else
+            str2[i] = str[i]
+        end
     end
 
-    puts message
+    puts str2.join
 end
 
-century(-1)
-century(1900)
-century(1601)
-century(2000)
+encode("hello")
 
+def decode(str)
+    str2 = str.chars
+    for i in 0..str.length
+        case str.chars[i]
+        when 1
+            str2[i] = 'a'
+        when 2
+            str2[i] = 'e'
+        when 3
+            str2[i] = 'i'
+        when 4
+            str2[i] = 'o'
+        when 5
+            str2[i] = 'u'
+        else
+            str2[i] = str[i]
+        end
+    end
+
+    puts str2.join
+end
+
+decode("hi there")
 # class User
 #     attr_reader :first_name, :last_name
 #     attr_writer :first_name
